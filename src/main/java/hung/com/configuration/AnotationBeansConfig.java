@@ -12,7 +12,7 @@ public class AnotationBeansConfig {
    /**
     * tất cả các Bean phải được khai báo ở đây
     */
-   @Bean 
+	@Bean(name ="HelloWorld")
    public HelloWorld helloWorld(){
       return new HelloWorld();
    }

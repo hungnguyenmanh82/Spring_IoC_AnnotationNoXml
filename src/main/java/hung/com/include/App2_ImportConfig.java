@@ -8,8 +8,8 @@ public class App2_ImportConfig {
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigB.class);
 
 		// now both beans A and B will be available...
-		BeanA a = ctx.getBean(BeanA.class);
-		BeanB b = ctx.getBean(BeanB.class);
+		BeanA a = (BeanA)ctx.getBean("BeanA");
+		BeanB b = (BeanB)ctx.getBean("BeanB");
 		
 		a.showMessage();
 		b.showMessage();

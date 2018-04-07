@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ConfigLifeCycle {
-	@Bean(initMethod = "init", destroyMethod = "cleanup" )
+	@Bean(name="foo", initMethod = "init", destroyMethod = "cleanup" )
 	public Foo foo() {
 		return new Foo();
 	}

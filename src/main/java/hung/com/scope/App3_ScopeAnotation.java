@@ -10,7 +10,7 @@ public class App3_ScopeAnotation {
 	public static void main(String[] args) {
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigScope.class);
 
-		Food food = ctx.getBean(Food.class);
+		Food food = (Food)ctx.getBean("Food");
 		food.init();
 	}
 }

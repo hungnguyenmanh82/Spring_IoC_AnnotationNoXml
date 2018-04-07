@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class AnotationBeansConfig {
    /**
     * tất cả các Bean phải được khai báo ở đây
+    * Nên đặt tên giống Class name để có thể Jump tới Class dễ dàng từ Eclipse
     */
 	@Bean(name ="HelloWorld")
    public HelloWorld helloWorld(){

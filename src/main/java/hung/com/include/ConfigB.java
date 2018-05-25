@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Import;
 public class ConfigB {
    @Bean(name="BeanB")
    public BeanB BeanCCC() {
+	 //có thể khởi tạo giá trị của BeanA() ở đây ở hàm Constructor hoặc các hàm setter
       return new BeanB(); 
    }
 }

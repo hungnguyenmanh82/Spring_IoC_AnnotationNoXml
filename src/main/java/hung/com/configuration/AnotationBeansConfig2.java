@@ -10,7 +10,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AnotationBeansConfig2 {
 	/**
-	 * tất cả các Bean phải được khai báo ở đây
+	 * Nên đặt tên giống Class name để có thể Jump tới Class dễ dàng từ Eclipse
+	 * Nếu ko khai báo bean name thì lấy tên class luôn.
+	 * Default: @Bean là singleton. Lần 1 goi sẽ trả về new instance, lần 2 gọi sẽ trả về instance lần đầu.
+	 * @Scope để xác định là singleton hay ko
 	 */
 	@Bean(name ="abc")
 	public HelloWorld helloWorld(){

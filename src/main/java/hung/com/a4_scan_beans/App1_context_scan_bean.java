@@ -41,8 +41,11 @@ public class App1_context_scan_bean {
 		MyComponent myComponent = (MyComponent) context.getBean("myComponent"); // chữ đầu tiên là chữ thường
 		myComponent.showAppInfo();
 
+		/**
+		 * Test Override @Bean: => mục tiêu là thay đổi cách hành xử của thư viện
+		 */
 		MyCar myCar = (MyCar)context.getBean(MyCar.class);
-		log.debug("car = {}", myCar.getCar()); // override not work: ToyotaCar
+		log.debug("car = {}", myCar.getCar());  // override ToyotaCar
 	}
 
 }

@@ -22,10 +22,12 @@ public class App2_web_scan_bean {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(App2_web_scan_bean.class, args);
 
+
+		/**
+		 * Test Override @Bean: => mục tiêu là thay đổi cách hành xử của thư viện
+		 */
 		MyCar myCar = (MyCar)context.getBean(MyCar.class);
-		log.debug("car = {}", myCar.getCar()); // override not work: ToyotaCar
-
-
+		log.debug("car = {}", myCar.getCar()); // override ToyotaCar
 	}
 
 }

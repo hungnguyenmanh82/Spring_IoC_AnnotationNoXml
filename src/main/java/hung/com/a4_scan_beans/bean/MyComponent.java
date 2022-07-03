@@ -17,15 +17,21 @@ Việc phân loại Bean giúp cho Spring dễ dàng tìm kiếm, ưu tiên và 
 @Component
 public class MyComponent {
     private static final Logger log = LogManager.getLogger();
+
+    private MyRepository repositoryA;
+
     /**
-     * @Autowired: là reference tới 1 @bean đã đc khởi tạo trc đó rồi.
-     * nếu ko có @bean nào của MyRepository interface này đc khởi tạo trc đó, nó sẽ trả về null
+     *
+     * @Autowired: repository sẽ đc Spring lấy từ BeanFactory như là input của method này
+     * (tên hàm là gì ko quan trọng)
      */
-    @Autowired   //refer to a singleton @bean đã đc khởi tạo rồi
-    private MyRepository repository;
+    @Autowired
+    public void setMyRepository(MyRepository repository){
+        this.repositoryA = repository;
+    }
  
     public void showAppInfo() {
-        log.debug("@autowired: MyRepository = {}", repository);
+        log.debug("@autowired: MyRepository = {}", repositoryA);
     }
  
 }

@@ -9,6 +9,10 @@ import hung.com.configuration.HelloWorld;
 public class App4_LifeCycle {
 
 	public static void main(String[] args) {
+		/**
+		 * ko dùng Beans.xml => dùng @configuration thay thế nó
+		 * ConfigLifeCycle.class chứa @configuration: dùng để khai báo @bean
+		 */
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigLifeCycle.class);
 
 //		Foo foo = ctx.getBean(Foo.class);

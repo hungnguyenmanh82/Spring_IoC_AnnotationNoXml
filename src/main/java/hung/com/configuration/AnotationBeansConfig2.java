@@ -14,6 +14,9 @@ public class AnotationBeansConfig2 {
 	 * Nếu ko khai báo bean name thì lấy tên class luôn.
 	 * Default: @Bean là singleton. Lần 1 goi sẽ trả về new instance, lần 2 gọi sẽ trả về instance lần đầu.
 	 * @Scope để xác định là singleton hay ko
+	 * ---
+	 * name: là id của bean. Trong trường hợp có nhiều bean cho 1 interface thì sẽ dùng @autowired @qualifier(nameId)
+	 * trường hợp ko khai báo name, thì chỉ có 1 instance
 	 */
 	@Bean(name ="abc")
 	public HelloWorld helloWorld(){

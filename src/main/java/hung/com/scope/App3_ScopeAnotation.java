@@ -8,6 +8,11 @@ import hung.com.lifecycle.Foo;
 
 public class App3_ScopeAnotation {
 	public static void main(String[] args) {
+
+		/**
+		 * ko dùng Beans.xml => dùng @configuration thay thế nó
+		 * ConfigScope.class chứa @configuration: dùng để khai báo @bean
+		 */
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigScope.class);
 
 		Food food = (Food)ctx.getBean("Food");

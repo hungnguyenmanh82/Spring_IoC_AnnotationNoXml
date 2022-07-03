@@ -1,7 +1,7 @@
 
 spring:
   main:
-    allow-bean-definition-overriding: true # cho phép override @bean
+    allow-bean-definition-overriding: true # cho phép override @bean khi dùng với @primary
 
 
 # ========================================== logging ===========================

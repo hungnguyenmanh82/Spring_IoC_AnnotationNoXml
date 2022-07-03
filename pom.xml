@@ -14,7 +14,30 @@
 		<spring.version>5.3.9</spring.version>
 	</properties>
 
+	<!-- Mục đích để quản lý version của các thư viện Springboot cho đồng nhất -->
+	<!-- phần dependencies sẽ ko phải khai báo version nữa -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.3</version>
+	</parent>
+
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- version theo spring-boot-starter-parent -->
+			<!-- <artifactId>spring-boot-starter</artifactId> -->
+			<exclusions>
+				<!-- loại trừ sử dụng logback = default. để xử dụng log4j2 -->
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+
+			</exclusions>
+		</dependency>
 
 		<!-- Spring Core -->
 		<!-- http://mvnrepository.com/artifact/org.springframework/spring-core -->
@@ -31,11 +54,14 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+
+		<!-- Thư viện này đã bao gồm Log4j2-core, log4j2-bridge-slf4j, log4j2-bridge-jul, log4j2-jcl -->
+		<!-- bridge để implement slf4j SPI và JUL SPI -->
+		<!-- log config file theo SPI implement logging -->
 		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.17.1</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+			<!-- version theo spring-boot-starter-parent -->
 		</dependency>
 
 	</dependencies>

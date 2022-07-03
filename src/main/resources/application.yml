@@ -1,0 +1,16 @@
+
+spring:
+  main:
+    allow-bean-definition-overriding: true # cho phép override @bean
+
+
+# ========================================== logging ===========================
+# log level khác với Log4j2: OFF FATAL ERROR WARN INFO DEBUG TRACE
+logging:
+  level:
+    root: TRACE
+    org.springframework.web: INFO
+    org.springframework.cloud: TRACE
+    org.springframework.*: INFO
+    org.hibernate: DEBUG
+

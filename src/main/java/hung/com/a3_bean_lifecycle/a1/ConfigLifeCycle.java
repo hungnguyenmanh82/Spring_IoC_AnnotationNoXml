@@ -18,9 +18,14 @@ public class ConfigLifeCycle {
 	 *
 	 */
 	@Bean(name="foo", initMethod = "init", destroyMethod = "cleanup" )
-	public DemoBean foo() {
+	public Demo2Bean foo() {
 		//có thể khởi tạo giá trị của BeanA() ở đây ở hàm Constructor hoặc các hàm setter
 
-		return new DemoBean();
+		return new Demo2Bean();
+	}
+
+	@Bean
+	public Demo1Bean demo1(){
+		return new Demo1Bean();
 	}
 }

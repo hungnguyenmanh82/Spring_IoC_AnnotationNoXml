@@ -12,8 +12,12 @@ public class App1_LifeCycle {
 		 */
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigLifeCycle.class);
 
-//		Foo foo = ctx.getBean(Foo.class);
-		DemoBean foo = (DemoBean)ctx.getBean("foo");
+		Demo1Bean demo1 = (Demo1Bean)ctx.getBean(Demo1Bean.class);
+
+//		Foo foo = ctx.getBean(Demo2Bean.class);
+		Demo2Bean foo = (Demo2Bean)ctx.getBean("foo");
+
+
 	}
 
 }

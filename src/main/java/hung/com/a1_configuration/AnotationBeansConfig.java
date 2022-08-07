@@ -22,6 +22,7 @@ public class AnotationBeansConfig {
 	 * ---
 	 * name: là id của bean. Trong trường hợp có nhiều bean cho 1 interface thì sẽ dùng @autowired @qualifier(nameId)
 	 * trường hợp ko khai báo name, thì chỉ có 1 instance
+	 * Trường hợp ko khai báo id thì sẽ lấy tên của method làm id
 	 */
 	@Bean(name ="HelloWorld")  
 	public HelloWorld helloWorld(){
